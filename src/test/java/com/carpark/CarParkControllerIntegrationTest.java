@@ -1,8 +1,9 @@
 package com.carpark;
 
 import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,7 +27,7 @@ public class CarParkControllerIntegrationTest {
 	@Test
 	public void test() throws Exception {
 		assertNotNull(mockMvc);
-		assertNotNull(controller);
+		assertThat(controller).isNotNull();
 
 		mockMvc.perform(get("/test")).andExpect(status().isOk());
 	}
