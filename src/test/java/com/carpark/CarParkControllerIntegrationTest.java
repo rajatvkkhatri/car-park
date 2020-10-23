@@ -1,5 +1,6 @@
 package com.carpark;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -23,7 +24,7 @@ class CarParkControllerIntegrationTest {
 	@Test
 	void test() throws Exception {
 		assertNotNull(mockMvc);
-		assertNotNull(controller);
+		assertThat(controller).isNotNull();
 
 		mockMvc.perform(get("/test")).andExpect(status().isOk());
 	}
