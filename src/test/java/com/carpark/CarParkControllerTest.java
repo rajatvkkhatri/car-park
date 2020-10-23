@@ -1,24 +1,24 @@
 package com.carpark;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
 
-@ExtendWith(MockitoExtension.class)
-class CarParkControllerTest {
+@RunWith(MockitoJUnitRunner.class)
+public class CarParkControllerTest {
 
 	private CarParkController controller;
 
-	@BeforeEach
-	void setup() {
+	@Before
+	public void setup() {
 		controller = new CarParkController();
 	}
 
 	@Test
-	void test() {
+	public void test() {
 		assertNotNull(controller);
 	}
 }
