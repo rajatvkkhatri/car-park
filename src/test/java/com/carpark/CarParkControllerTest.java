@@ -1,6 +1,7 @@
 package com.carpark;
 
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
